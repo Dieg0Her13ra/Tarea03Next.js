@@ -1,0 +1,12 @@
+1.-¿Qué es Next.js y por qué se dice que es el framework de React más popular? 
+R= Next.js es un framework (conjunto de herramientas, métodos y reglas) que te permite crear aplicaciones web full-stack esta cosntruido sobre Reat y se dice que es el framework más popular del mismo por la cantidad de herramientas y en si la accesibilidad que brinda como: Reacts server components, streaming de html, optimizaciíon de imagenes, creación de rutas de API's en aplicación, etc.
+2.- ¿Cuál es el comando exacto con npx para inicializar un proyecto de Next.js asegurando usar la última versión?
+R= Usamos npx create-next-app@latest, llamamos al gestor de paquetes para ejecutar un proceso en el cual se crea una aplicación de next desde 0 con app@latest decimos que queremos la ultima versión de la app
+3.-¿Cuál es el comando utilizado para levantar el entorno de desarrollo y en qué puerto se ejecuta por defecto? 
+R= npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm, le decimos que cree una aplicación de next js en una carpeta llamada nextjs-dashboard, usando la template que viene directamente del repositorio usando --example y el link del repositorio para no hacerlo desde 0, esta vez es una template para un dashboard
+4.-¿Qué función cumple el comando npm run build en un proyecto de Next.js? 
+R= Llamamos al gestor de paquetes npm para ejecutar el script build que sirve para compilar la aplicacion
+5.-Describe para que sirven las carpetas, public y app
+R= En la carpeta public se alojan los archivos estaticos como imagenes, videos y audios, etc. Mientras que app es la carpeta más importante ya que ahí se encuentran todas las rutas mediante archivos .tsx (typescript) y dependiendo de la anidación de las carpetas, el layout es la envoltura que comparten todas las rutas, esta la carpeta ui donde se encuentran componentes ya creados, lib son las herramientas para fetching, definiciones, utilidades
+6.-¿Que es un CCS MODULE y como se usan? 
+R=
