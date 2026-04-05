@@ -15,4 +15,12 @@ R= Es un archivo typescript que sirve como envoltorio que rodea las rutas de nue
 8 ¿Que es el enrutamiento ? 
 R= Basicamente la estructura de las URLS de la aplicación esta deifnida por la jerarquia existente en las carpetas que existende dentro de app
 9 ¿Cual es la diferencia entre Image e img?
-R=
+R=img es un componente de html que esta poco optimizado en comparación a Image de next, ya que image de next optimiza la imagen, cambiando el tamaño y el formato (una sola vez no lo hace por cada vez que haces un request, a menos que se deba volver a hacer), antes de llevarla a la pagina, por eso necesita que le digan explicitamente el tamaño que tendra la imagen, tambien identifica el tipo de navegador y cual formato es idoneo para el mismo,
+10 ¿Que es el Lazy Load?
+R= Si la imagen no aparece no la carga, esto funciona a la par de los breakpoints, de ese modo podemos poner multiples imagenes para pc y movil sin que se carguen las imagenes que no se van a usar
+11 Cual es el funcionamiento del siguiente codigo, en que momento se muestra cada imagen
+R= Es un codigo de diseño responsivo donde se tienen dos imagenes que tienen lugar en el mismo espacio pero que no se mostraran al mismo tiempo, se mostrara una u otra dependiendo de los pixeles que tenga la pantalla usando breakpoints, debajo de 768 pixeles se muestra el hero mobile por el breakpoint block md: hidden y por encima de los 768 pixeles se muestra la versión desktop por hidden md: block
+12 ¿Como funciona el enrutamiento en Next JS  ? 
+R= Mediante un sistema de enrutamiento por archivos, cada barra es una carpeta dentro de app, estas carpetas deben contener un archivo page.tsx, siendo la primer barra el page.tsx que se encuentra dentro de app
+13 ¿Que es una ruta en el contexto web y donde las hemos visto en la clase ? 
+R= Una ruta es una URL uqe nos permite acceder a una parte de la aplicación, y pues todo el tiempo las estamos viendo, un endpoint vienen siendo una endpoint de una API
