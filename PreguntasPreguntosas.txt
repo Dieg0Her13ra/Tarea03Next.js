@@ -9,4 +9,10 @@ R= Llamamos al gestor de paquetes npm para ejecutar el script build que sirve pa
 5.-Describe para que sirven las carpetas, public y app
 R= En la carpeta public se alojan los archivos estaticos como imagenes, videos y audios, etc. Mientras que app es la carpeta más importante ya que ahí se encuentran todas las rutas mediante archivos .tsx (typescript) y dependiendo de la anidación de las carpetas, el layout es la envoltura que comparten todas las rutas, esta la carpeta ui donde se encuentran componentes ya creados, lib son las herramientas para fetching, definiciones, utilidades
 6.-¿Que es un CCS MODULE y como se usan? 
+R=Un modulo de ccs es una ofrma de cargar estilos pero de manera aislada y sin descargar ningun tipo de dependencia para evitar colisiones entre nombres de clases, usan extensión .module.css, con .module se detecta que se trata de un modulo
+7 ¿Que hace el componente  Layout.tsx ? 
+R= Es un archivo typescript que sirve como envoltorio que rodea las rutas de nuestra aplicación, ahi tambien se pueden importar los estilos globales pues es algo que comparten todas las rutas, en pocas palabrasa define una estructura común
+8 ¿Que es el enrutamiento ? 
+R= Basicamente la estructura de las URLS de la aplicación esta deifnida por la jerarquia existente en las carpetas que existende dentro de app
+9 ¿Cual es la diferencia entre Image e img?
 R=
