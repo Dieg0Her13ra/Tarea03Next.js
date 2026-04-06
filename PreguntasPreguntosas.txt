@@ -1,26 +1,71 @@
 1.-¿Qué es Next.js y por qué se dice que es el framework de React más popular? 
 R= Next.js es un framework (conjunto de herramientas, métodos y reglas) que te permite crear aplicaciones web full-stack esta cosntruido sobre Reat y se dice que es el framework más popular del mismo por la cantidad de herramientas y en si la accesibilidad que brinda como: Reacts server components, streaming de html, optimizaciíon de imagenes, creación de rutas de API's en aplicación, etc.
+
 2.- ¿Cuál es el comando exacto con npx para inicializar un proyecto de Next.js asegurando usar la última versión?
 R= Usamos npx create-next-app@latest, llamamos al gestor de paquetes para ejecutar un proceso en el cual se crea una aplicación de next desde 0 con app@latest decimos que queremos la ultima versión de la app
+
 3.-¿Cuál es el comando utilizado para levantar el entorno de desarrollo y en qué puerto se ejecuta por defecto? 
 R= npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm, le decimos que cree una aplicación de next js en una carpeta llamada nextjs-dashboard, usando la template que viene directamente del repositorio usando --example y el link del repositorio para no hacerlo desde 0, esta vez es una template para un dashboard
+
 4.-¿Qué función cumple el comando npm run build en un proyecto de Next.js? 
 R= Llamamos al gestor de paquetes npm para ejecutar el script build que sirve para compilar la aplicacion
+
 5.-Describe para que sirven las carpetas, public y app
 R= En la carpeta public se alojan los archivos estaticos como imagenes, videos y audios, etc. Mientras que app es la carpeta más importante ya que ahí se encuentran todas las rutas mediante archivos .tsx (typescript) y dependiendo de la anidación de las carpetas, el layout es la envoltura que comparten todas las rutas, esta la carpeta ui donde se encuentran componentes ya creados, lib son las herramientas para fetching, definiciones, utilidades
+
 6.-¿Que es un CCS MODULE y como se usan? 
 R=Un modulo de ccs es una ofrma de cargar estilos pero de manera aislada y sin descargar ningun tipo de dependencia para evitar colisiones entre nombres de clases, usan extensión .module.css, con .module se detecta que se trata de un modulo
+
 7 ¿Que hace el componente  Layout.tsx ? 
 R= Es un archivo typescript que sirve como envoltorio que rodea las rutas de nuestra aplicación, ahi tambien se pueden importar los estilos globales pues es algo que comparten todas las rutas, en pocas palabrasa define una estructura común
+
 8 ¿Que es el enrutamiento ? 
-R= Basicamente la estructura de las URLS de la aplicación esta deifnida por la jerarquia existente en las carpetas que existende dentro de app
+R= Es el sistema que nos permite separar la aplicación en diferentes secciones que podemos visitar usando una URL
+
 9 ¿Cual es la diferencia entre Image e img?
-R=img es un componente de html que esta poco optimizado en comparación a Image de next, ya que image de next optimiza la imagen, cambiando el tamaño y el formato (una sola vez no lo hace por cada vez que haces un request, a menos que se deba volver a hacer), antes de llevarla a la pagina, por eso necesita que le digan explicitamente el tamaño que tendra la imagen, tambien identifica el tipo de navegador y cual formato es idoneo para el mismo,
+R=img es un componente de html que esta poco optimizado en comparación a Image de next, ya que image de next optimiza la imagen, cambiando el tamaño y el formato (una sola vez no lo hace por cada vez que haces un request, a menos que se deba volver a hacer), antes de llevarla a la pagina, por eso necesita que le digan explicitamente el tamaño que tendra la imagen, tambien identifica el tipo de navegador y cual formato es idoneo para el mismo
+
 10 ¿Que es el Lazy Load?
 R= Si la imagen no aparece no la carga, esto funciona a la par de los breakpoints, de ese modo podemos poner multiples imagenes para pc y movil sin que se carguen las imagenes que no se van a usar
+
 11 Cual es el funcionamiento del siguiente codigo, en que momento se muestra cada imagen
 R= Es un codigo de diseño responsivo donde se tienen dos imagenes que tienen lugar en el mismo espacio pero que no se mostraran al mismo tiempo, se mostrara una u otra dependiendo de los pixeles que tenga la pantalla usando breakpoints, debajo de 768 pixeles se muestra el hero mobile por el breakpoint block md: hidden y por encima de los 768 pixeles se muestra la versión desktop por hidden md: block
+
 12 ¿Como funciona el enrutamiento en Next JS  ? 
-R= Mediante un sistema de enrutamiento por archivos, cada barra es una carpeta dentro de app, estas carpetas deben contener un archivo page.tsx, siendo la primer barra el page.tsx que se encuentra dentro de app
+R= Mediante un sistema de enrutamiento por archivos llado app router, cada carpeta representa un segmento de la URL, y cada carpeta tiene que tener un page.tsx
+
 13 ¿Que es una ruta en el contexto web y donde las hemos visto en la clase ? 
 R= Una ruta es una URL uqe nos permite acceder a una parte de la aplicación, y pues todo el tiempo las estamos viendo, un endpoint vienen siendo una endpoint de una API
+
+14 ¿Que arrojo a MiduDev el localhost:300/dashboard, donde hemos visto esos errores en la clase ? 
+R= Le arrojo un estatus del servidor 404, que quiere decir que el servidor no encontro lo que se buscaba, lo hemos visto cuando queremos hacer un get al server de un record que no existe
+
+15. ¿Qué es el File System Routing?
+R=EL file system routing es el sistema de enrutado de Next.js, esta basado en el sistema de archivos del proyecto, la jerarquia y nombre de las carpeta de app definen las rutas o URLS de la aplicación, al crear una carpeta y luego un page.tsx es suficiente para crear una nueva ruta
+
+16 ¿Como funcionan las rutas anidadas?
+R= Basta con crear una carpeta con un archivo dentro de la subcarpeta que esta app, supongamos que tenemos la carpeta app y dentro dashboard, adentro de dashboard creamos clientes con su page.tsx y abremos creado la ruta anidada dashboard/clientes
+
+17 ¿Investiga por que es necesario esto ? (export default function)
+R= El export default function es importante ya que de esa forma habilitas una ruta accesible dentro del page.tsx,así le indicas que componente principal de UI de una ruta vas a definir, Next.js requiere que las page.tsx exporten un componente por defecto para poder visualizar la pagina
+
+18 ¿Para que sirve el componente Link?
+R= es una herramienta de Next que nos permite cambiar la URL sin la necesidad de recargar totalmente el navegador y volver a cargar todos los recursos,, así simulamos una single page application, reutiliza todos los recursos posibles, re-renderiza unicamente lo que cambia.
+
+19 ¿Que se carga cuando usamos <a> y que cuando se usa <link> ?
+R= Cuando usamos <a> el navegador se recarga totalmente, se vuelven a descargar todos los recursos aunque la nueva pagina reutilice los anteiores, mientras que cuando usamos <Link> estamos haciendo navegación del lado del cliene porque funciona como una single page application siendo más fluida, ya que solo carga lo minimo necesario e indispensable para mostrar la ruta nueva, evitamos asi la recarga completa
+
+21 ¿Investiga que es un Hook?
+Son herramientas que te permiten acceder a la información de las rutas, de los paths del router para que puedas actualizarlas y cambiarlas, en una definición mas especifica en realidad se tratan de herramientas que te permienten pescar o acceder a información especifíca o funcionalidades del framework de manera facil
+
+22 ¿Que hooks usa Midu?
+Midu usa usePathname() desde next/navigation
+
+23 ¿Por que ocurre el siguiente error?
+R=Lo que pasa es que los componentes se estan ejecutan solo en el servidor, por lo que no se estan ejecutando en el cliente, el pathname solo existe en el cliente por lo que para usarlo tenemos que ejecutarlo en el cliente, usando el use client
+
+24 ¿Es posible ejecutar los componentes de react en el cliente y el servidor?
+R=Sep, de manera predeterminada los componenetes se ejecutan en el servidor, asi recupera el html de manera facil y lo devuelve tambien de manera facil, pero tambien hay componentes que se necesitan ejecutar en el navegador para poder interactuar con ellos, como clics y eventos
+
+25 ¿Que es el code splitting?
+R=Es una funcionalidad de Next que permite dividir el codigo para no tener que descargar toda la pagina con todos sus recursos de golpe y más bien separarlos en chunks que se iran cargando conforme se necesiten
