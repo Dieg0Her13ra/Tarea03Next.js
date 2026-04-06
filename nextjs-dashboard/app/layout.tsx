@@ -1,3 +1,5 @@
+import './ui/global.css'; //cargamos estilo global estilo global
+
 export default function RootLayout({
   children,
 }: {
