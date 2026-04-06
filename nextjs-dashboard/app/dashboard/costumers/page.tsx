@@ -1,3 +1,3 @@
-export default function CostumersPage(){
+export default function CstumersPage(){
     return <p>Costumers Page</p>
 }
